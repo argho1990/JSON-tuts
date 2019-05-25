@@ -12,7 +12,7 @@
 <body>
     <script>
         let companies =
-            [
+            `[
                 {
                     "name": "Big Corporation",
                     "numberOfEmployees": 10000,
@@ -26,10 +26,11 @@
                     "ceo": null,
                     "rating": 4.2
                 }
-            ]
+            ]`
         // console.log(companies);
         // console.log(JSON.parse(companies));
-        console.log(companies[1].name);
+        console.log(JSON.parse(companies)[1].name);
+        //Output Small Startups
 
 
     </script>
