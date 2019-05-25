@@ -224,6 +224,16 @@ console.log(person)//gives undefined.
 
 person = JSON.parse(person);//to Object.
 
+See code:
+
+We are going to create a JSON file and a people array in JSON and fetch that data 
+through AJAX and output it onto the screen.
+
+See Code:
+
+
+
+
 
 
 
