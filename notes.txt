@@ -115,7 +115,129 @@ it extremely light weight so when you send it across the internet through differ
 take a very little amount of space which means it will quickly send back and forth which gives 
 your user a great end experience.
 
-In order to use JSON and consume JSON.
+Traversy Media:
+JSON is important if you are using Restfull API's and sending data back and forth.
+It's pretty much replaced XML in that area.
+
+What is JSON?
+1.Javascript Object Notation:
+2.Lightweight data-interchange format:used to send data back and forth to a server,as text 
+3.Based on a subset of Javascript
+4.Easy to read and write.
+5.Often used with AJAX.(Asynchronous Javascript in XML).
+6.AJAX uses JSON more than it does with XML which is actually in its name.
+7.AJAX is used to send data back and forth from client and server without having to refresh the
+page in the browser.
+8.How we can make an AJAX request to the JSON file,and output the content in the browser?
+9.JSON can also be parsed with almost any modern languages either natively or through libararies,
+so even if you are not a Javascript Developer,learning JSON is extremely relevant and I would also
+suggest that any programmer should learn Javascript anyways.
+
+Data Types:
+1.Numbers:No difference between integer and floats or floats.They are all looked at as numbers.
+If we use a numeric with no quotes around it that would be looked at as a number.
+2.String:String of Unicode characters.Use double quotes.
+These must be wrapped in double quotes.
+3.Boolean : true or false.
+4.Arrays:Ordered list of 0 or more values.
+Arrays are aslo wrapped in [] brackets just like in regular Javascript or any programming
+language.
+5.We can aslo embed child objects which are undordered collection of key/value pairs.
+and we have multi-teared Objects embedded in the JSON Object.
+6.Null: which is an empty value.
+
+When working with object literals we can use any standard Javascript including functions,dates,
+But if its specified as json values,need to fit into one of these.We do have supersets of JSONs,
+such as BSON which is used by MongoDB that can allow additional datatypes but that's beyond this
+course.
+JSON Syntax Rules:
+
+1.use key/value pairs - {"name":"Brad"}
+2.uses double quotes around KEY and VALUE.
+If this was a Javascript Object Literal we wouldn't need the quotes around the key just the
+string value but if we wanted this to be parsed as json as valid json,we need the double quotes,
+around both the key and the value.
+If it's valid json,its also much must follow the specific data types that we just described.      
+3.Must use the specified data types.
+4.File type is ".json".
+5.The MIME type associated with json is "Application/json".
+So,say if you are working with restfull API that you want to send JSON,you can use this type.
+in the header.
+
+
+JSON example:
+{
+ 
+   "name":"Brad Traversy",//String
+   "age":35,//Number
+   "address":{ // Embedded Object
+         "street":"5 ,main st",
+         "city":"Boston
+   },
+
+   "children":["Brianna","Nicholas"] //Array Of Strings.
+}
+
+// Uses multiple data-types.
+
+<body>
+    <script>
+        var person = {
+            name: "Brad"
+        };
+        console.log(person);//Object name: "Brad" works in javascript but not valid JSON.
+        //go to JSONLint.com is a JSON validator. ---> https://jsonlint.com/
+    </script>
+
+</body>
+
+
+->set the datatype to anything that we can do in Javascript.
+->even a function -> not a valid JSON.
+email: function(){
+                return 'brad@gmail.com';
+            }
+Offcourse that is not valid.
+Its has to be one of the datatypes specified which is Number,String,Boolean,null and array and
+Object.
+var person = {
+            name: "Brad",
+            age : 35,
+            // email: function(){
+            //     return 'brad@gmail.com';
+            // }
+        };
+
+We can prepare this as JSON if we wanted to send it through AJAX to server or do something that
+requires it to be valid JSON.We can actually change it to a adjacent string so to do that,
+we can use a function called stringify so what I will do is
+
+person = JSON.stringify(person);
+pass the person Object from above.
+console.log(person);//gives us a string which is formatted correctly quotes around the keys
+and around the string but not around the number.
+
+
+That's valid JSON you can send to a server.
+Same JSON string,Turn it back to an Object:
+console.log(person)//gives undefined.
+
+person = JSON.parse(person);//to Object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
