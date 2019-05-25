@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Example</title>
+</head>
+<!-- Anything in JSON is valid Javascript -->
+
+<body>
+    <script>
+        let companies =
+            [
+                {
+                    "name": "Big Corporation",
+                    "numberOfEmployees": 10000,
+                    "ceo": "Mary",
+                    "rating": 3.6
+                },
+                {
+
+                    "name": "Small Startup",
+                    "numberOfEmployees": 3,
+                    "ceo": null,
+                    "rating": 4.2
+                }
+            ]
+        console.log(companies);
+        console.log(JSON.parse(companies));
+
+    </script>
+</body>
+
+</html>
