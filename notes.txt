@@ -71,3 +71,57 @@ For eg the "friends" array could have a friends array and it can have the same p
 very deeply nested array,if you really want it.
 We don't put a , on the very last property value,key pair we have.
 Close it with a curly brace and thats our full JSON file created.
+
+Most of the time when you are dealing with JSON,you are going to get it back as a string
+and not as an actual Javascript Object.
+
+To emulate that lets surround that in backticks ``.
+
+      `[
+            {
+                "name": "Big Corporation",
+                "numberOfEmployees": 10000,
+                "ceo": "Mary",
+                "rating": 3.6
+            },
+            {
+
+                "name": "Small Startup",
+                "numberOfEmployees": 3,
+                "ceo": null,
+                "rating": 4.2
+            }
+        ]`
+
+console.log(companies);
+And we can check that out inside of our browser here as you can see we have logged the companies 
+variable.
+0: {name: "Big Corporation", numberOfEmployees: 10000, ceo: "Mary", rating: 3.6}
+1: {name: "Small Startup", numberOfEmployees: 3, ceo: null, rating: 4.2}
+
+Most of the time when you are dealing with JSON,you are going to get it back as a string and 
+not as an actual Javascript Object,so to emulate that will surround this in backticks '',so 
+there is an actual string and if you save that you will see that our console just has a string
+instead of an actual object and we can't actually use this object inside of our Javascript.
+
+So,in order to convert this JSON String into a Javascript Object we need to use whats called
+JSON.parse
+console.log(JSON.parse(companies));
+We pass it a string.It will take that string and convert it into a Javascript Object.
+0: {name: "Big Corporation", numberOfEmployees: 10000, ceo: "Mary", rating: 3.6}
+1: {name: "Small Startup", numberOfEmployees: 3, ceo: null, rating: 4.2}
+
+it extremely light weight so when you send it across the internet through different API's,it will
+take a very little amount of space which means it will quickly send back and forth which gives 
+your user a great end experience.
+
+In order to use JSON and consume JSON.
+
+
+
+
+
+
+
+
+
